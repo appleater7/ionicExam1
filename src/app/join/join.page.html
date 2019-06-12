@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>회원가입</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="joinForm"] (ngSubmit)="doLogin(joinForm.value)">
+    <ion-item>
+      <ion-label>아이디</ion-label>
+      <ion-input type="text" formControlName="id"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>비밀번호</ion-label>
+      <ion-input type="password" formControlName="pwd"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>이름</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button type="submit" [disabled]="!joinForm.valid">회원가입</button>
+      <button type="reset">취소</button>
+    </ion-item>
+  </form>
+</ion-content>
