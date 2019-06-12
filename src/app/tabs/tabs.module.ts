@@ -15,7 +15,6 @@ import { JoinPageModule } from '../join/join.module';
     FormsModule,
     TabsPageRoutingModule,
     JoinPageModule
-
   ],
   declarations: [TabsPage]
 })

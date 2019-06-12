@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <form [formGroup]="joinForm"] (ngSubmit)="doLogin(joinForm.value)">
+  <form [formGroup]="joinForm" (ngSubmit)="doLogin(joinForm.value)">
     <ion-item>
       <ion-label>아이디</ion-label>
       <ion-input type="text" formControlName="id"></ion-input>
@@ -16,6 +16,19 @@
     <ion-item>
       <ion-label>이름</ion-label>
       <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>지역선택</ion-label>
+      <ion-select>
+      <ion-select-option>선택</ion-select-option>
+      <ion-select-option *ngFor="let op of ops" [value]="op.value">{{op.text}}</ion-select-option>
+    </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>취미선택</ion-label>
+      <ion-select multiple="true">
+          <ion-select-option *ngFor="let hobby of hobbies" [value]="hobby.value">{{hobby.text}}</ion-select-option>
+      </ion-select>
     </ion-item>
     <ion-item>
       <button type="submit" [disabled]="!joinForm.valid">회원가입</button>

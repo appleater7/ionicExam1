@@ -29,10 +29,11 @@ export class CommonService {
     return query;
   }
   get(url,params){
-    return this._http.get(url);
+    return this._http.get(baseUrl+url);
   }
   post(url,params){
     url = baseUrl + url;
+    console.log(url);
     return this._http.post(url,params,httpOptions);
   }
 }
