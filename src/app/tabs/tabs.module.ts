@@ -7,6 +7,8 @@ import { TabsPageRoutingModule } from './tabs.router.module';
 
 import { TabsPage } from './tabs.page';
 import { JoinPageModule } from '../join/join.module';
+import { ListPageModule } from '../list/list.module';
+import { GridPageModule } from '../grid/grid.module';
 
 @NgModule({
   imports: [
@@ -14,7 +16,9 @@ import { JoinPageModule } from '../join/join.module';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
-    JoinPageModule
+    JoinPageModule,
+    ListPageModule,
+    GridPageModule
   ],
   declarations: [TabsPage]
 })

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 import { JoinPage } from '../join/join.page';
+import { ListPage } from '../list/list.page';
+import { GridPage } from '../grid/grid.page';
 
 const routes: Routes = [
   {
@@ -38,6 +40,14 @@ const routes: Routes = [
       {
         path:'join',
         component:JoinPage
+      },
+      {
+        path:'list',
+        component:ListPage
+      },
+      {
+        path:'grid',
+        component:GridPage
       },
       {
         path: '',

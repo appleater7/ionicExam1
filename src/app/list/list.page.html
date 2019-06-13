@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScroll)="printScroll($event)">
+  <ion-list>
+    <ion-item *ngFor="let b of board">
+      <ion-label>번호 : {{b.no}}</ion-label>
+      <ion-label>제목 : {{b.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="로딩중">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
